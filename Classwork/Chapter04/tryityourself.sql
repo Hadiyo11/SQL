@@ -11,6 +11,7 @@ VALUES
 COPY movies (id, movie, actor)
 FROM 'C:\SQL\movies.txt'
 WITH (FORMAT CSV, HEADER);
+WITH (FORMAT CSV, HEADER, DELIMITER '|');
 
 COPY (
   SELECT county_name, state, housing_unit_count_100_percent
